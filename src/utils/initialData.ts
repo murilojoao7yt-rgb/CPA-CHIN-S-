@@ -1,0 +1,160 @@
+import { ChestTier, PlatformConfig, GuestLead } from '../types';
+
+export const DEFAULT_PLATFORM_CONFIG: PlatformConfig = {
+  targetUrl: 'https://t.me/CPACHINES26',
+  platformName: 'CPA CHINÊS 2026',
+  headline: 'Ganhe Bônus de Boas-Vindas e Baús Exclusivos ao Entrar!',
+  bonusAmountText: 'Até R$ 500,00 no Primeiro Acesso',
+  welcomeMessage: 'Você foi convidado com prioridade VIP para liberar seus bônus instantâneos.',
+  autoRedirect: false,
+  redirectDelaySeconds: 3,
+  lastUpdated: new Date().toISOString(),
+};
+
+export const INITIAL_CHEST_TIERS: ChestTier[] = [
+  {
+    id: 'bronze',
+    name: 'Baú de Bronze',
+    level: 1,
+    minGuests: 5,
+    rewardMin: 25,
+    rewardMax: 50,
+    unlocked: false,
+    opened: false,
+    earnedAmount: null,
+    openedAt: null,
+    accentColor: '#cd7f32',
+    gradient: 'from-amber-700 via-amber-800 to-amber-950',
+    borderGlow: 'border-amber-600/60 shadow-amber-900/30',
+    description: 'Inicie sua jornada! Atinja 5 clientes convidados para destravar este baú inicial.',
+    bonusPerk: '+10% em giros extras',
+  },
+  {
+    id: 'prata',
+    name: 'Baú de Prata',
+    level: 2,
+    minGuests: 15,
+    rewardMin: 80,
+    rewardMax: 180,
+    unlocked: false,
+    opened: false,
+    earnedAmount: null,
+    openedAt: null,
+    accentColor: '#94a3b8',
+    gradient: 'from-slate-400 via-slate-600 to-slate-800',
+    borderGlow: 'border-slate-400/60 shadow-slate-600/30',
+    description: 'Acelere suas indicações! 15 convidados garantem o Baú de Prata com bônus aumentado.',
+    bonusPerk: 'Chave Prateada Especial',
+  },
+  {
+    id: 'ouro',
+    name: 'Baú de Ouro',
+    level: 3,
+    minGuests: 35,
+    rewardMin: 250,
+    rewardMax: 600,
+    unlocked: false,
+    opened: false,
+    earnedAmount: null,
+    openedAt: null,
+    accentColor: '#eab308',
+    gradient: 'from-yellow-400 via-amber-500 to-amber-700',
+    borderGlow: 'border-yellow-400/80 shadow-yellow-500/40',
+    description: 'Recompensas expressivas! Destrave o cobiçado Baú Dourado com 35 clientes na plataforma.',
+    bonusPerk: 'Bônus multiplicador 2x',
+  },
+  {
+    id: 'diamante',
+    name: 'Baú de Diamante',
+    level: 4,
+    minGuests: 70,
+    rewardMin: 800,
+    rewardMax: 1800,
+    unlocked: false,
+    opened: false,
+    earnedAmount: null,
+    openedAt: null,
+    accentColor: '#38bdf8',
+    gradient: 'from-cyan-400 via-sky-500 to-blue-700',
+    borderGlow: 'border-cyan-400/80 shadow-cyan-500/40',
+    description: 'Nível Mestre de Afiliados. 70 convidados cadastrados liberam altas premiações.',
+    bonusPerk: 'Prioridade em Saques PIX',
+  },
+  {
+    id: 'lendario',
+    name: 'Super Baú Lendário',
+    level: 5,
+    minGuests: 120,
+    rewardMin: 2500,
+    rewardMax: 5000,
+    unlocked: false,
+    opened: false,
+    earnedAmount: null,
+    openedAt: null,
+    accentColor: '#a855f7',
+    gradient: 'from-purple-500 via-fuchsia-600 to-indigo-900',
+    borderGlow: 'border-purple-400/90 shadow-purple-600/50',
+    description: 'O ápice das recompensas! Atingindo 120 clientes você abre o Baú Supremo com até R$ 5.000.',
+    bonusPerk: 'Selo VIP Vitalício & Bônus Máximo',
+  },
+];
+
+export const INITIAL_LEADS: GuestLead[] = [
+  {
+    id: 'lead-1',
+    name: 'Rodrigo Mendonça',
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80',
+    origin: 'WhatsApp',
+    status: 'ativou_bonus',
+    timestamp: 'Há 2 minutos',
+    city: 'São Paulo, SP',
+    rewardGenerated: 12.5,
+  },
+  {
+    id: 'lead-2',
+    name: 'Camila Ferreira',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80',
+    origin: 'Telegram',
+    status: 'cadastrado',
+    timestamp: 'Há 6 minutos',
+    city: 'Belo Horizonte, MG',
+    rewardGenerated: 8.0,
+  },
+  {
+    id: 'lead-3',
+    name: 'Lucas Silveira',
+    avatar: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100&auto=format&fit=crop&q=80',
+    origin: 'Instagram',
+    status: 'ativou_bonus',
+    timestamp: 'Há 14 minutos',
+    city: 'Curitiba, PR',
+    rewardGenerated: 15.0,
+  },
+  {
+    id: 'lead-4',
+    name: 'Juliana Castro',
+    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop&q=80',
+    origin: 'WhatsApp',
+    status: 'visitou',
+    timestamp: 'Há 22 minutos',
+    city: 'Rio de Janeiro, RJ',
+    rewardGenerated: 2.5,
+  },
+];
+
+export const SAMPLE_NAMES = [
+  'Gabriel Almeida', 'Mariana Santos', 'Felipe Barreto', 'Bruna Nogueira',
+  'Thiago Ribeiro', 'Larissa Moreira', 'Rafael Albuquerque', 'Beatriz Lima',
+  'Vinícius Carvalho', 'Fernanda Dias', 'Matheus Oliveira', 'Renata Souza',
+  'Daniel Costa', 'Aline Vasconcelos', 'Igor Nascimento', 'Tatiana Freitas'
+];
+
+export const SAMPLE_CITIES = [
+  'São Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG', 'Salvador, BA',
+  'Fortaleza, CE', 'Brasília, DF', 'Curitiba, PR', 'Manaus, AM',
+  'Recife, PE', 'Porto Alegre, RS', 'Goiânia, GO', 'Campinas, SP'
+];
+
+export const SAMPLE_ORIGINS: GuestLead['origin'][] = [
+  'WhatsApp', 'Telegram', 'Instagram', 'Facebook', 'TikTok', 'Link Direto'
+];
